@@ -63,14 +63,12 @@ class App extends Component{
             <FastCount total={this.countDays()}
             fast={this.countDays("fastDay")}
             breakDay={this.countDays("breakDay")}/> :
-            (this.props.location.pathname === "/list-day") ?
-            <FastDayList days={this.state.allFastDays}
-            filter={this.props.params.filter}/> :
             (this.props.location.pathname === "/add-day") ?
             <AddDayForm onNewDay={this.addDay}/> :
 
             
-            <Uuuuupsss404/> 
+            <FastDayList days={this.state.allFastDays}
+            filter={this.props.params.filter}/>
             
 
             }   
